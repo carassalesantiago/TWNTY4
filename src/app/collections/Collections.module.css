@@ -836,3 +836,184 @@
     display: none;
   }
 }
+
+
+/* TWNTY4 COLLECTIONS ARRIVING SOON — FINAL */
+
+.collectionCard {
+  position: relative;
+  display: block;
+  min-height: 420px;
+  overflow: hidden;
+  border: 1px solid rgba(54, 47, 39, 0.25);
+  background:
+    radial-gradient(
+      circle at 50% 39%,
+      rgba(86, 75, 62, 0.16) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      145deg,
+      #24211d 0%,
+      #141311 52%,
+      #090909 100%
+    );
+  color: #e7ddd0;
+  transition:
+    border-color 300ms ease,
+    transform 400ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 400ms ease;
+}
+
+.collectionCard:hover {
+  border-color: rgba(231, 221, 208, 0.48);
+  box-shadow: 0 18px 42px rgba(15, 12, 9, 0.18);
+  transform: translateY(-2px);
+}
+
+/*
+  Las imágenes ya no se renderizan, pero esta regla garantiza
+  que ninguna personalización anterior vuelva a mostrarlas.
+*/
+.collectionCard img {
+  display: none !important;
+}
+
+.cardShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.018) 0%,
+      transparent 35%,
+      rgba(0, 0, 0, 0.12) 62%,
+      rgba(0, 0, 0, 0.52) 100%
+    );
+  pointer-events: none;
+}
+
+.arrivingSoon {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  min-width: 175px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 22px 20px;
+  border-top: 1px solid rgba(231, 221, 208, 0.42);
+  border-bottom: 1px solid rgba(231, 221, 208, 0.42);
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-weight: 400;
+  letter-spacing: 0.26em;
+  line-height: 1.12;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  transition:
+    border-color 300ms ease,
+    letter-spacing 400ms ease,
+    opacity 300ms ease;
+}
+
+.arrivingSoon span {
+  display: block;
+  transform: translateX(0.13em);
+}
+
+.collectionCard:hover .arrivingSoon {
+  border-color: rgba(231, 221, 208, 0.78);
+  letter-spacing: 0.3em;
+}
+
+.cardContent {
+  position: absolute;
+  right: 24px;
+  bottom: 23px;
+  left: 25px;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.cardContent > span:first-child {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+}
+
+.cardContent strong {
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.cardContent small {
+  margin-top: 10px;
+  color: rgba(231, 221, 208, 0.7);
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: 0.83rem;
+  letter-spacing: 0.025em;
+  line-height: 1.35;
+}
+
+.arrow {
+  flex-shrink: 0;
+  margin-left: 18px;
+  font-family: Arial, sans-serif;
+  font-size: 1.05rem;
+  transition: transform 250ms ease;
+}
+
+.collectionCard:hover .arrow {
+  transform: translateX(6px);
+}
+
+@media (min-width: 1100px) {
+  .collectionCard {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 800px) {
+  .collectionCard {
+    min-height: 390px;
+  }
+
+  .arrivingSoon {
+    top: 43%;
+    min-width: 160px;
+    padding: 20px 16px;
+    font-size: 1.42rem;
+  }
+
+  .cardContent {
+    right: 20px;
+    bottom: 21px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .collectionCard {
+    min-height: 365px;
+  }
+
+  .arrivingSoon {
+    min-width: 148px;
+    font-size: 1.24rem;
+    letter-spacing: 0.23em;
+  }
+
+  .collectionCard:hover .arrivingSoon {
+    letter-spacing: 0.25em;
+  }
+}

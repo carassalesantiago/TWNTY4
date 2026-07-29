@@ -26,12 +26,14 @@ export default function CollectionsPage() {
             key={collection.slug}
             aria-label={`Discover ${collection.title}`}
           >
-            <img
-              src={collection.image}
-              alt={collection.title}
-            />
+
 
             <span className={styles.cardShade} />
+
+            <span className={styles.arrivingSoon}>
+              <span>Arriving</span>
+              <span>Soon</span>
+            </span>
 
             <span className={styles.cardContent}>
               <span>

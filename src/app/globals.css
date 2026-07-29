@@ -55,21 +55,22 @@ button {
 
 .hero-wall {
   position: absolute;
-  inset: 0 0 16.5%;
+  inset: 0;
   z-index: -10;
-  background:
-    url("/textures/wall-noise.svg"),
-    radial-gradient(
-      ellipse at 55% 37%,
-      rgba(37, 34, 30, 0.33) 0%,
-      rgba(18, 17, 15, 0.22) 31%,
-      rgba(7, 7, 6, 0.91) 70%,
-      #040404 100%
-    );
-  background-size:
-    500px 500px,
-    100% 100%;
-  background-blend-mode: soft-light, normal;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.24) 0%,
+      rgba(0, 0, 0, 0.05) 45%,
+      rgba(0, 0, 0, 0.30) 100%
+    ),
+    url("/images/home/twnty4-new-york.webp?v=20260729-final");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 58%;
 }
 
 .hero-vignette {
@@ -78,115 +79,33 @@ button {
   z-index: -9;
   pointer-events: none;
   background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.12),
-      transparent 20%,
-      transparent 72%,
-      rgba(0, 0, 0, 0.34)
+    radial-gradient(
+      ellipse at center,
+      transparent 38%,
+      rgba(0, 0, 0, 0.18) 100%
     ),
     linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0.08),
-      transparent 55%,
-      rgba(0, 0, 0, 0.46)
+      rgba(0, 0, 0, 0.20) 0%,
+      transparent 38%,
+      rgba(0, 0, 0, 0.20) 100%
     );
 }
 
 .hero-beam {
-  position: absolute;
-  top: 16.6%;
-  bottom: 16.2%;
-  left: 0;
-  z-index: -7;
-  width: 37%;
-  opacity: 0.68;
-  clip-path: polygon(
-    0 0,
-    4.6% 0,
-    100% 100%,
-    0 100%
-  );
-  background:
-    linear-gradient(
-      108deg,
-      rgba(215, 199, 179, 0.56) 0%,
-      rgba(166, 151, 133, 0.42) 41%,
-      rgba(92, 81, 70, 0.19) 75%,
-      rgba(22, 20, 18, 0) 100%
-    );
-  filter: blur(0.7px);
+  display: none;
 }
 
 .hero-beam-dust {
-  position: absolute;
-  top: 16.6%;
-  bottom: 16.2%;
-  left: 0;
-  z-index: -6;
-  width: 37%;
-  opacity: 0.38;
-  clip-path: polygon(
-    0 0,
-    4.6% 0,
-    100% 100%,
-    0 100%
-  );
-  background-image: url("/textures/wall-noise.svg");
-  background-size: 420px 420px;
-  mix-blend-mode: screen;
+  display: none;
 }
 
 .hero-floor {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -5;
-  height: 16.7%;
-  background:
-    url("/textures/floor-noise.svg"),
-    radial-gradient(
-      ellipse at 23% 0,
-      rgba(177, 154, 129, 0.27) 0,
-      rgba(94, 79, 65, 0.11) 30%,
-      transparent 52%
-    ),
-    linear-gradient(
-      180deg,
-      #171512 0%,
-      #0d0c0b 42%,
-      #080808 100%
-    );
-  background-size:
-    800px 310px,
-    100% 100%,
-    100% 100%;
-  background-blend-mode:
-    soft-light,
-    screen,
-    normal;
-  box-shadow: 0 -18px 40px rgba(0, 0, 0, 0.62);
+  display: none;
 }
 
 .hero-floor-light {
-  position: absolute;
-  bottom: 13.4%;
-  left: 6.5%;
-  z-index: -4;
-  width: 37%;
-  height: 8.5%;
-  border-radius: 50%;
-  opacity: 0.72;
-  background:
-    radial-gradient(
-      ellipse,
-      rgba(218, 196, 169, 0.48) 0%,
-      rgba(137, 113, 90, 0.2) 45%,
-      transparent 73%
-    );
-  filter: blur(10px);
-  transform: rotate(-2deg);
+  display: none;
 }
 
 .header {
@@ -316,8 +235,8 @@ button {
   font-size: clamp(3rem, 4.9vw, 4.45rem);
   font-weight: 400;
   line-height: 0.95;
-  letter-spacing: 0.225em;
-  transform: translateX(0.105em);
+  letter-spacing: 0.17em;
+  transform: translateX(0.06em);
 }
 
 .hero-logo p {
@@ -951,3 +870,288 @@ main {
     margin-top:42px;
 }
 
+/* TWNTY4 HOME NEW YORK BACKGROUND START */
+
+main:has(> .twnty4-home-background) {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #090909;
+}
+
+main:has(> .twnty4-home-background)
+  > *:not(.twnty4-home-background) {
+  position: relative;
+  z-index: 2;
+}
+
+.twnty4-home-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.18) 0%,
+      rgba(0, 0, 0, 0.02) 44%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url("/images/home/twnty4-new-york.webp?v=1");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 62%;
+  transform: scale(1.002);
+}
+
+.twnty4-home-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 35%,
+      rgba(0, 0, 0, 0.16) 100%
+    );
+}
+
+/*
+  En pantallas anchas mantenemos el edificio central visible
+  y evitamos que la fotografía parezca pequeña.
+*/
+@media (min-width: 900px) {
+  .twnty4-home-background {
+    background-size: cover;
+    background-position: center 66%;
+  }
+}
+
+/*
+  En iPhone usamos la proporción vertical completa de la foto.
+*/
+@media (max-width: 899px) {
+  .twnty4-home-background {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* TWNTY4 HOME NEW YORK BACKGROUND END */
+
+/* TWNTY4 NY DEFINITIVE START */
+
+.twnty4-homepage-ny {
+  position: relative !important;
+  isolation: isolate !important;
+  min-height: 100svh !important;
+  overflow: hidden !important;
+  background: #090909 !important;
+}
+
+/*
+  La foto se coloca como un elemento real y no como fondo del main.
+  Así no puede quedar oculta por el fondo anterior de la homepage.
+*/
+.twnty4-ny-fixed-background {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: -2 !important;
+  width: 100% !important;
+  height: 100% !important;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.22) 0%,
+      rgba(0, 0, 0, 0.02) 48%,
+      rgba(0, 0, 0, 0.18) 100%
+    ),
+    url("/images/twnty4-new-york.webp?v=20260729") !important;
+
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  pointer-events: none !important;
+}
+
+.twnty4-ny-fixed-background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 35%,
+      rgba(0, 0, 0, 0.13) 100%
+    );
+}
+
+/*
+  Todo el contenido original queda por encima de la foto.
+*/
+.twnty4-homepage-ny > *:not(.twnty4-ny-fixed-background) {
+  position: relative;
+  z-index: 2;
+}
+
+/*
+  Oculta imágenes decorativas anteriores colocadas directamente
+  como fondo del hero, sin ocultar logo, textos ni navegación.
+*/
+.twnty4-homepage-ny
+  > img[aria-hidden="true"],
+.twnty4-homepage-ny
+  > picture[aria-hidden="true"] {
+  display: none !important;
+}
+
+/*
+  PC: ampliación controlada para que la ciudad no se vea pequeña.
+*/
+@media (min-width: 1100px) {
+  .twnty4-ny-fixed-background {
+    background-size: max(100vw, 1120px) auto !important;
+    background-position: center 64% !important;
+  }
+}
+
+/*
+  Pantallas medianas.
+*/
+@media (min-width: 700px) and (max-width: 1099px) {
+  .twnty4-ny-fixed-background {
+    background-size: cover !important;
+    background-position: center 58% !important;
+  }
+}
+
+/*
+  iPhone y celulares.
+*/
+@media (max-width: 699px) {
+  .twnty4-ny-fixed-background {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
+
+/* TWNTY4 NY DEFINITIVE END */
+
+
+/* TWNTY4 NEW YORK RESPONSIVE FINAL */
+
+@media (min-width: 1200px) {
+  .hero-wall {
+    /*
+      La imagen vertical llena la pantalla.
+      El edificio queda centrado y con suficiente escala.
+    */
+    background-size: cover;
+    background-position: center 61%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1199px) {
+  .hero-wall {
+    background-size: cover;
+    background-position: center 58%;
+  }
+}
+
+@media (max-width: 699px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-wall {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+/* TWNTY4 LOGO ALIGNMENT — DEFINITIVE */
+
+/*
+  Logo principal:
+  TWNTY y 4 comparten exactamente la misma caja,
+  tamaño, línea base y altura.
+*/
+.hero-logo h1 {
+  display: inline-flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  margin: 22px 0 0 !important;
+  padding: 0 !important;
+  font-family: var(--editorial) !important;
+  font-size: clamp(3rem, 4.9vw, 4.45rem) !important;
+  font-weight: 400 !important;
+  line-height: 0.95 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+  transform: translateX(0.08em) !important;
+}
+
+.hero-logo-word,
+.hero-logo-four{
+  display:inline-block !important;
+  font-family:inherit !important;
+  font-size:100% !important;
+  font-weight:inherit !important;
+  line-height:inherit !important;
+  letter-spacing:0 !important;
+  margin-left:-0.035em !important;
+  position:relative !important;
+  top:-0.13em !important;
+  transform:none !important;
+}
+
+.hero-logo-word {
+  letter-spacing: 0.225em !important;
+}
+
+.hero-logo-four {
+  position: relative !important;
+  top: -0.13em !important;
+  margin-left: -0.035em !important;
+  letter-spacing: 0 !important;
+  transform: none !important;
+}
+
+/*
+  Logo superior:
+  aplica la misma corrección al 4 pequeño.
+*/
+.mini-logo-name {
+  display: inline-flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  margin-top: 7px !important;
+  padding: 0 !important;
+  font-size: 1.03rem !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  white-space: nowrap !important;
+  transform: translateX(0.06em) !important;
+}
+
+.mini-logo-name {
+  letter-spacing: 0.13em !important;
+}
+
+.mini-logo-four {
+  position: relative !important;
+  top: -0.12em !important;
+  display: inline-block !important;
+  margin-left: -0.08em !important;
+  padding: 0 !important;
+  font: inherit !important;
+  font-size: 1em !important;
+  line-height: inherit !important;
+  letter-spacing: 0 !important;
+  transform: none !important;
+}

@@ -34,13 +34,13 @@ export default function Twnty4Hero() {
           <nav className="nav nav-left" aria-label="Main navigation">
             <a href="/shop">Shop</a>
             <a href="/collections">Collections</a>
-            <a href="#studio">Legacy</a>
+            <a href="/legacy">Legacy</a>
             <a href="/journal">Journal</a>
           </nav>
 
           <a className="mini-logo" href="#home" aria-label="TWNTY4 home">
             <span className="mini-logo-number">24</span>
-            <span className="mini-logo-name">TWNTY4</span>
+            <span className="mini-logo-name">TWNTY<span className="mini-logo-four">4</span></span>
             <span className="mini-logo-studio">Studio</span>
           </a>
 
@@ -71,7 +71,7 @@ export default function Twnty4Hero() {
         <div className="hero-content">
           <div className="hero-logo" aria-label="TWNTY4 Studio">
             <span className="hero-number">24</span>
-            <h1>TWNTY4</h1>
+            <h1><span className="hero-logo-word">TWNTY</span><span className="hero-logo-four">4</span></h1>
             <p>Studio</p>
           </div>
 
@@ -157,14 +157,10 @@ export default function Twnty4Hero() {
             Collections
           </a>
 
-          <button
-            type="button"
-            aria-disabled="true"
-            title="Legacy — coming soon"
-          >
+          <a href="/legacy" onClick={closeOverlays}>
             <small>03</small>
             Legacy
-          </button>
+          </a>
 
           <a href="/journal" onClick={closeOverlays}>
             <small>04</small>

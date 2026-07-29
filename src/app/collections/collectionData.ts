@@ -59,6 +59,16 @@ export const collections: Collection[] = [
       "Belts and underwear designed with the same restraint, material quality and attention to detail as every TWNTY4 garment.",
     number: "05",
   },
+  {
+    slug: "second-project",
+    title: "Second Project",
+    description: "A new chapter is taking shape.",
+    image: "",
+    statement: "A new chapter is taking shape.",
+    detail:
+      "Second Project is currently being developed in private. Its purpose, form and direction will be revealed only when the concept fully reflects the TWNTY4 vision.",
+    number: "06",
+  },
 ];
 
 export function getCollection(slug: string) {

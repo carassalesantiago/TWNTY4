@@ -2,7 +2,7 @@ import Twnty4Hero from "@/components/Twnty4Hero";
 
 export default function Home() {
   return (
-    <main>
+    <main >
       <Twnty4Hero />
     </main>
   );

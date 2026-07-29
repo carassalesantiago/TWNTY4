@@ -1,20 +1,53 @@
-import Link from "next/link";
-import "../simple-page.css";
-
 export default function ShopPage() {
   return (
-    <main className="simple-page">
-      <Link className="simple-logo" href="/">
-        TWNTY4
-      </Link>
-
+    <main
+      style={{
+        minHeight:'100vh',
+        background:'#0a0a0a',
+        color:'#e8dfd2',
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center',
+        textAlign:'center',
+        padding:'40px'
+      }}
+    >
       <div>
-        <p>Shop</p>
-        <h1>The store is being curated.</h1>
+        <p
+          style={{
+            letterSpacing:'0.45em',
+            textTransform:'uppercase',
+            fontSize:'12px',
+            opacity:.65
+          }}
+        >
+          TWNTY4
+        </p>
 
-        <Link className="simple-link" href="/collections">
-          Explore the collection →
-        </Link>
+        <h1
+          style={{
+            fontSize:'64px',
+            fontWeight:400,
+            margin:'25px 0'
+          }}
+        >
+          Temporarily Closed
+        </h1>
+
+        <p
+          style={{
+            maxWidth:'620px',
+            lineHeight:1.8,
+            opacity:.72,
+            margin:'0 auto'
+          }}
+        >
+          Our online store is temporarily closed while
+          we refine every detail of the first TWNTY4
+          collection.
+
+          Thank you for your patience.
+        </p>
       </div>
     </main>
   );

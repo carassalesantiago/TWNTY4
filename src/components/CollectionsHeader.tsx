@@ -73,6 +73,10 @@ export default function CollectionsHeader() {
           </button>
 
           <Link href="/journal">Journal</Link>
+
+          <Link href="/collections/second-project">
+            Second Project
+          </Link>
         </nav>
 
         <Link

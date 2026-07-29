@@ -23,7 +23,7 @@ export default function Header() {
           Collections
         </a>
 
-        <a href="#legacy" onClick={() => setMenuOpen(false)}>
+        <a href="/legacy" onClick={() => setMenuOpen(false)}>
           Legacy
         </a>
 

@@ -36,9 +36,16 @@ export default async function CollectionDropPage({
       <section className={styles.hero}>
         <div
           className={styles.background}
-          style={{
-            backgroundImage: `url("${collection.image}")`,
-          }}
+          style={
+            collection.image
+              ? {
+                  backgroundImage: `url("${collection.image}")`,
+                }
+              : {
+                  backgroundImage:
+                    "linear-gradient(145deg, #24211d 0%, #151311 52%, #090909 100%)",
+                }
+          }
         />
 
         <div className={styles.overlay} />
@@ -67,7 +74,7 @@ export default async function CollectionDropPage({
 
           <div className={styles.release}>
             <span>Drop status</span>
-            <strong>In preparation</strong>
+            <strong>Coming Soon</strong>
           </div>
         </div>
 
