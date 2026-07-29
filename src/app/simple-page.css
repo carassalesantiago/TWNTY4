@@ -1,0 +1,67 @@
+.simple-page {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 100px 8vw;
+  background:
+    url("/textures/wall-noise.svg"),
+    radial-gradient(
+      circle at 50% 30%,
+      #dcd3c6,
+      #c7bbab 72%,
+      #aa9d8c
+    );
+  background-blend-mode: soft-light, normal;
+  color: #181512;
+  text-align: center;
+}
+
+.simple-logo {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.26em;
+  transform: translateX(-50%);
+}
+
+.simple-page > div {
+  max-width: 950px;
+}
+
+.simple-page p {
+  margin: 0 0 30px;
+  font-family: var(--font-interface), Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.simple-page h1 {
+  margin: 0;
+  font-family: var(--font-editorial), Georgia, serif;
+  font-size: clamp(4rem, 9vw, 9rem);
+  font-weight: 400;
+  line-height: 0.88;
+}
+
+.simple-description {
+  max-width: 520px;
+  margin: 36px auto 0 !important;
+  line-height: 1.8;
+}
+
+.simple-link {
+  display: inline-block;
+  margin-top: 55px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid currentColor;
+  font-family: var(--font-interface), Arial, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+}

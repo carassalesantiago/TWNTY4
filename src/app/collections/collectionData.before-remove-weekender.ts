@@ -50,19 +50,27 @@ export const collections: Collection[] = [
     number: "04",
   },
   {
+    slug: "weekender",
+    title: "Weekender",
+    description: "Made for the journey.",
+    image: "/images/collections/weekender.webp",
+    statement: "Objects designed to travel beyond the expected.",
+    detail:
+      "Weekender is currently taking form through considered materials, practical elegance and details made for movement.",
+    number: "05",
+  },
+  {
     slug: "private-objects",
     title: "Private Objects",
-    description: "Belts & underwear.",
-    image: "/images/collections/private-objects-final.webp?v=1",
-    statement: "The objects closest to us deserve equal consideration.",
+    description: "Accessories that define the details.",
+    image: "/images/collections/private-objects.webp",
+    statement: "The smallest objects often reveal the most.",
     detail:
-      "Belts and underwear designed with the same restraint, material quality and attention to detail as every TWNTY4 garment.",
-    number: "05",
+      "A private selection of accessories is being developed with the same discipline as every TWNTY4 garment.",
+    number: "06",
   },
 ];
 
 export function getCollection(slug: string) {
-  return collections.find(
-    (collection) => collection.slug === slug
-  );
+  return collections.find((collection) => collection.slug === slug);
 }
